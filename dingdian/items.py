@@ -9,18 +9,29 @@ import scrapy
 
 
 class DingdianItem(scrapy.Item):
-    # define the fields for your item here like:
     name = scrapy.Field()
-    # 小说的名字
     author = scrapy.Field()
-    # 作者
     novelurl = scrapy.Field()
-    # 小说地址
     serialstatus = scrapy.Field()
-    # 状态
     serialnumber = scrapy.Field()
-    # 连载字数
     category = scrapy.Field()
-    # 文章类别
     name_id = scrapy.Field()
-    # 小说编号
+
+
+class DcontentItem(scrapy.Item):
+    id_name = scrapy.Field()
+    chaptercontent = scrapy.Field()
+    # 用于绑定章节顺序
+    num = scrapy.Field()
+    chapterurl = scrapy.Field()
+    # 章节名字
+    chaptername = scrapy.Field()
+
+
+class HaoduofuliItem(scrapy.Item):
+    category = scrapy.Field()  # 类型
+    title = scrapy.Field()  # 标题
+    imgurl = scrapy.Field()  # 图片的地址
+    yunlink = scrapy.Field()  # 百度云盘的连接
+    password = scrapy.Field()  # 百度云盘的密码
+    url = scrapy.Field()  # 页面的地址
