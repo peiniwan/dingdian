@@ -13,6 +13,7 @@ reload(sys)
 sys.setdefaultencoding("utf8")
 
 
+# scrapy基本使用
 class Myspider(scrapy.Spider):
     # entrypoint.py的第三个参数，此Name的名字！在整个项目中有且只能有一个、名字不可重复
     name = 'dingdians'
